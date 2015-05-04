@@ -1,11 +1,11 @@
 # Updates to terraform-aws-cf-install and terraform-openstack-cf-install
 
-There have been a couple exciting changes to the two Cloud Foundry provisioning projects for [AWS](https://github.com/cloudfoundry-community/terraform-aws-cf-install) and [OpenStack](https://github.com/cloudfoundry-community/terraform-openstack-cf-install) which make deploying Cloud Foundry to these two infrastructures much simpler.
+There have been a couple exciting changes to the two Cloud Foundry provisioning projects for [AWS](https://github.com/cloudfoundry-community/terraform-aws-cf-install) and [OpenStack](https://github.com/cloudfoundry-community/terraform-openstack-cf-install) which make deploying Cloud Foundry to these two infrastructures even easier than before.
 
 See [this link](https://blog.starkandwayne.com/2015/04/06/deploy-cloud-foundry-on-aws-using-terraform/) for instructions on deploying Cloud Foundry to AWS, one for OpenStack is coming soon so check the blog again soon.
 
 ## make provision
-First, the `provision.sh` script is no longer executed in `make apply`. Why? Under the old code if an error was encountered in order to rerun the script the Bastion server would be destroyed, a new one created and the script copied to the new server and executed. If you had work on the Bastion server, say a bunch of custom boshworkspaces, you would lose all this work.
+First, the `provision.sh` script is no longer executed in `make apply`, instead we added an extra step. Why? Under the old code if an error was encountered in order to rerun the script the Bastion server would be destroyed, a new one created and the script copied to the new server and executed. If you had work on the Bastion server, say a bunch of custom boshworkspaces, you would lose all this work.
 
 `make apply` now is responsible for setting up the networking and an initial Bastion VM. So the order of commands to stand up Cloud Foundry now is:
 
