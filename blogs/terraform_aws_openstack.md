@@ -20,6 +20,7 @@ The `make apply` must complete successfully before executing `make provision`.  
 `make provision` creates a `provision.sh` script in the `provision/` folder which is copied to `/home/ubuntu/provision.sh` on the Bastion server.  The script no longer requires all 21 command line parameters as they are now automatically populated.  What this means is there is a complete copy of the provision script on your local computer and the Bastion server.
 
 A couple notes:
+
  - Every time you run `make provision` a new copy of `provision.sh` is generated locally, then copied to the Bastion server and finally executed on the the Bastion server.
  - On some OpenStack deployments the Bastion server takes a few seconds before the ssh port 22 is ready to accept connections.  If you run into this, just wait a minute and execute `make provision` again.
 
@@ -27,6 +28,7 @@ A couple notes:
 We've made the provision script (mostly) able to run as many times as needed to get to a successful state.  This is helpful if RVM, Github or the package manager are having a bad day with some sort of temporary issue, you can simply rerun the provision.sh script and the missing pieces will be installed.
 
 There are a couple known exceptions if the script is terminated that manual intervention is still needed:
+
  - Termination while running `bosh bootstrap deploy` occurs.  Depending on where it died you may just be able to rerun the script.
  - Termination when packages or jobs are being rebuilt.  You need to wait until there are no BOSH tasks running before running the script again.  You can ssh onto the Bastion server (see the next section on how to easily do this) and run `bosh tasks` to get a list of running BOSH tasks.  
 
