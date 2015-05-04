@@ -1,8 +1,8 @@
 # Updates to terraform-aws-cf-install and terraform-openstack-cf-install
 
-There have been a couple exciting changes to the two Cloud Foundry provisioning projects for (AWS) and (OpenStack) which make deploying Cloud Foundry to these two infrastructures much simpler.
+There have been a couple exciting changes to the two Cloud Foundry provisioning projects for [AWS](https://github.com/cloudfoundry-community/terraform-aws-cf-install) and [OpenStack](https://github.com/cloudfoundry-community/terraform-openstack-cf-install) which make deploying Cloud Foundry to these two infrastructures much simpler.
 
-See (link) for instructions on deploying Cloud Foundry to AWS, one for OpenStack is coming soon so check the blog again soon.
+See [this link](https://blog.starkandwayne.com/2015/04/06/deploy-cloud-foundry-on-aws-using-terraform/) for instructions on deploying Cloud Foundry to AWS, one for OpenStack is coming soon so check the blog again soon.
 
 ## make provision
 First, the `provision.sh` script is no longer executed in `make apply`. Why? Under the old code if an error was encountered in order to rerun the script the Bastion server would be destroyed, a new one created and the script copied to the new server and executed. If you had work on the Bastion server, say a bunch of custom boshworkspaces, you would lose all this work.
@@ -17,9 +17,9 @@ make provision
 
 The `make apply` must complete successfully before executing `make provision`.  The AWS project requires the `make apply` to be run twice.
 
-`make provision` creates a `provision.sh` script in the `provision/` folder which is copied to the `/home/ubuntu` folder Bastion server.  The script no longer require all 21 command line parameters as they are now automatically populated.  What this means is there is a complete copy of the provision script on your local computer and the Bastion server.
+`make provision` creates a `provision.sh` script in the `provision/` folder which is copied to `/home/ubuntu/provision.sh` on the Bastion server.  The script no longer requires all 21 command line parameters as they are now automatically populated.  What this means is there is a complete copy of the provision script on your local computer and the Bastion server.
 
-A couple notes
+A couple notes:
  - Every time you run `make provision` a new copy of `provision.sh` is generated locally, then copied to the Bastion server and finally executed on the the Bastion server.
  - On some OpenStack deployments the Bastion server takes a few seconds before the ssh port 22 is ready to accept connections.  If you run into this, just wait a minute and execute `make provision` again.
 
