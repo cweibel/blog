@@ -1,6 +1,6 @@
 # OpenStack Juno Static IP Patch
 
-There is a bug in Mirantis/OpenStack Juno which prevents BOSH from assigning static IPs.  This can be quite an issue when trying to install Cloud Foundry.
+There is a (bug)[https://review.openstack.org/#/c/149905/2/nova/network/neutronv2/api.py] in OpenStack Juno which prevents BOSH from assigning static IPs.  This can be quite an issue when trying to install Cloud Foundry on (OpenStack)[https://github.com/cloudfoundry-community/terraform-openstack-cf-install].
 
 There is a very simple fix:
 
