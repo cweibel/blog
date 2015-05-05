@@ -49,7 +49,7 @@ ssh node-105
 
 Once on this server, open `api.py` file
 ```
-vi /usr/lib/pythone2.6/site-packages/nova/network/neutronv2/api.py
+vi /usr/lib/python2.6/site-packages/nova/network/neutronv2/api.py
 ```
 
 Replace the line:
