@@ -72,7 +72,7 @@ service openstack-nova-compute restart
 Now you have a choice, you can repeat the previous section for the remaining compute nodes (node-106, node-107, node-108 and node-109) or leverage the first server we fixed, copy the `api.py` file and restart nova-compute.
 
 To leverage the first compute server's patch get the list of remaining compute servers we need to patch.
-When we ran `nova service-list` on the controller node there were 5 compute nodes listed, starting with `node-105` and ending with `node-109`. We've already done node-105 so we still need to do node-106 through node-109.
+When we ran `nova service-list` on the controller node there were 5 compute nodes listed, starting with `node-105` and ending with `node-109`. We've already done `node-105` so we still need to patch `node-106` through `node-109`.
 
 ```bash
 for i in {106..109}
