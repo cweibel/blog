@@ -32,10 +32,10 @@ On the Create User screen, enter a **username** and **password**, set both the P
 
 ## Step 2 - Create a new Project
 
-Select the `admin` project, navigate it Identity > Projects and click `+ Create Project`
+Select the `admin` project, navigate it `Identity > Projects` and click `+ Create Project`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-4.png)
 
-On the `Project Information` tab enter the name for the project. Make sure that the project name does not include white space, this will eventually be fixed. Note that this is also the **tenant name**.
+On the `Project Information` tab enter the name for the project. Make sure that the project name does not include white space, this restriction will eventually be fixed. Note that this is also the **tenant name** you will need later.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-3.png)
 
 On the `Project Members` tab, select the user we created back in Step 1 by clicking on the blue "+" icon.
