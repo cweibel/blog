@@ -65,7 +65,7 @@ This will copy a terraform configuration to your local computer.  Using your fav
 ```
 vi terraform.tfvars
 ```
-The determine how to populate each of the parameters view [this](TODO) document.
+The determine how to populate each of the parameters view [this](https://github.com/cweibel/blog/blob/master/blogs/install_cf_openstack_config.md) document.
 
 After editing your file should look like:
 
