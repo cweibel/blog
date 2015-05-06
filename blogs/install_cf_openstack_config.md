@@ -57,8 +57,12 @@ Select `cf-terraform` as the project and navigate to Identity > Projects.  Ident
 
 This one is fairly simple, we have decided that all internal ip addresses should be in the range `192.168.x.x` so **network** will be "192.168"
 
-
 ## Step 5 - Retrieve the auth_url
+
+ogged in as `cf-user` and using the `cf-terraform` project navigate to Project > Compute > Access & Security, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Access-Security-OpenStack-Dashboard.png)
+
+
 ## Step 6 - Retrieve the floating IP pool
 ## Step 7 - Retrieve the external network id
 
