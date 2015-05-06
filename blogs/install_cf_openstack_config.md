@@ -62,10 +62,31 @@ This one is fairly simple, we have decided that all internal ip addresses should
 ## Step 6 - Retrieve the floating IP pool
 ## Step 7 - Retrieve the external network id
 
-Logged in as `cf-user` and using the `cf-terraform` project navigate to Network > Networks, and select the external network. The **network_external_id** is listed under the section "ID".
+Logged in as `cf-user` and using the `cf-terraform` project navigate to Network > Networks, and select the floating ip pool from Step 6. The **network_external_id** is listed under the section "ID".d
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Network-Detail-OpenStack-Dashboard.png)
 
 ## Step 8 - Identify a local set of keys to use
+
+You need to use an existing set of public/private keys which do not have a passphrase.  If you would like to create your own keys:
+
+### Key creation on Linux and OSX
+
+Execute the following command:
+```bash
+ssh-keygen -t rsa -N "" -f ~/.ssh/cfkey
+```
+
+This will create two files:
+
+ - Your **public_key_path** at `~/.ssh/cfkey.pub`
+ - Your **key_path** at `~/.ssh/cfkey`
+
+### Key creation on Windows
+
+Since Windows does not have this functionality prebuilt, please consult whatever tool you are using to SSH to server.
+
+
+# Summary
 
 At the end we have the following information:
 ```
@@ -75,8 +96,8 @@ tenant_name="terraform_cf"                                 # Step 2
 tenant_id="69f43a6776344a338b9cafdea088aca4"               # Step 3
 username="cf_user"                                         # Step 2
 password="cf_user"                                         # Step 2
-public_key_path="/Users/chris/.ssh/id_rsa.pub"             # Step 8
-key_path="/Users/chris/.ssh/id_rsa"                        # Step 8
+public_key_path="/Users/chris/.ssh/cfkey.pub"              # Step 8
+key_path="/Users/chris/.ssh/cfkey"                         # Step 8
 floating_ip_pool="net04_ext"                               # Step 6
 region="RegionOne"                                         # TODO is this somewhere?
 network_external_id="aa801a43-688b-4949-b82e-74ead5e358cd" # Step 7
