@@ -59,11 +59,15 @@ This one is fairly simple, we have decided that all internal ip addresses should
 
 ## Step 5 - Retrieve the auth_url
 
-ogged in as `cf-user` and using the `cf-terraform` project navigate to Project > Compute > Access & Security, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
+Logged in as `cf-user` and using the `cf-terraform` project navigate to Project > Compute > Access & Security, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Access-Security-OpenStack-Dashboard.png)
 
 
 ## Step 6 - Retrieve the floating IP pool
+
+Logged in as `cf-user` and using the `admin` project (note: NOT `cf-terraform` project) navigate to Project > Network > Networks. Your OpenStack administrator can identify the external network, the **floating_ip_pool** is listed under the `Name` column for the identified row.
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Networks-OpenStack-Dashboard-1.png)
+
 ## Step 7 - Retrieve the external network id
 
 Logged in as `cf-user` and using the `cf-terraform` project navigate to Network > Networks, and select the floating ip pool from Step 6. The **network_external_id** is listed under the section "ID".d
