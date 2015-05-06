@@ -35,7 +35,11 @@ On the Create User screen, enter a **username** and **password**, set both the P
 Select the `admin` project, navigate it Identity > Projects and click `+ Create Project`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-4.png)
 
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-3.png)
 
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-2.png)
+
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-1.png)
 
 Make sure that the project name does not include white space, this will eventually be fixed
 
