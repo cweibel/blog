@@ -41,7 +41,7 @@ On the `Project Information` tab enter the name for the project. Make sure that 
 On the `Project Members` tab, select the user we created back in Step 1 by clicking on the blue "+" icon.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-2.png)
 
-Once the user is selected, be sure that the permissions for the user are `_member_`, higher permissions are not required.  Click `Create Project` when you are done adding users
+Once the user is selected, be sure that the permissions for the user are `_member_`, higher permissions are not required and cause errors.  Click `Create Project` when you are done adding users
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-1.png)
 
 
