@@ -201,11 +201,16 @@ cf enable-service-access mysql56  # Enables a mysql 5.6 instance
 
 Terraform does not yet quite cleanup after itself. You can run make destroy to get quite a few of the resources you created, but you will probably have to manually track down some of the bits and manually remove them. Once you have done so, run make clean to remove the local cache and status files, allowing you to run everything again without errors. Locally run:
 ```bash
-make destroy
-sleep 10
-make destroy
+make destroy ; sleep 10 ; make destroy
+```
+
+Note that it may take a few runs to have all the objects destroyed.  Once `make destroy` is successful, run the following to reset Terraform files for any subsequent runs:
+```bash
 make clean
 ```
+
+
+
 
 # Resources
 
