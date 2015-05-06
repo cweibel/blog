@@ -4,7 +4,7 @@
 
 Welcome!
 
-This manual will guide you through the steps necessary to deploy Cloud Foundry using Terraform on OpenStack. A tremendous amount of automation has been put in place to allow you to quickly deploy Cloud Foundry in an easy and repeatable way.
+This manual will guide you through the steps necessary to deploy Cloud Foundry using Terraform on OpenStack. A tremendous amount of automation has been put in place to allow you to quickly deploy Cloud Foundry in an easy and repeatable way.  Installing to AWS can be found [here](https://blog.starkandwayne.com/2015/04/06/deploy-cloud-foundry-on-aws-using-terraform/).
 
 # Overview
 
