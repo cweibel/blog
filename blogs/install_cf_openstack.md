@@ -90,7 +90,7 @@ make apply
 make provision
 ```
 
-Go get something to drink. It will take about an hour to deploy everything to OpenStack. Don’t panic if an error occurs during `make apply` or `make provision`, run the command again as AWS resources aren’t always available when requested.
+Go get something to drink. It will take about an hour to deploy everything to OpenStack. Don’t panic if an error occurs during `make apply` or `make provision`, run the command again as OpenStack resources aren’t always available when requested.
 
 When the installation has completed, your screen should output a series of values you will need to connect to the Cloud Foundry deployment, in our example we see:
 
