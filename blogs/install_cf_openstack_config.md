@@ -11,11 +11,11 @@ Assumptions:
 We will:
 
  1. Create a new user name and password
- 2. Create a new Project
+ 2. Create a new project
  3. Retrieve the tenant name
  4. Retrieve the tenant id
  5. Retrieve the network
- 6. Retrieve the auth_url
+ 6. Retrieve the auth url
  7. Retrieve the floating IP pool
  8. Retrieve the external network id
  9. Identify a local set of keys to use
@@ -23,7 +23,7 @@ We will:
 
 ## Step 1 - Create a new user name and password
 
-Once you login into Horizon, select the `admin` project, navigate it Identity > Users and click `+ Create User`
+Once you login into Horizon, select the `admin` project, navigate to `Identity > Users` and click `+ Create User`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-1.jpg)
 
 On the Create User screen, enter a **username** and **password**, set both the Primary Project and Role to `admin` and click `Create User`
