@@ -54,9 +54,17 @@ Select `cf-terraform` as the project and navigate to Identity > Projects.  Ident
 
 
 ## Step 4 - Retrieve the network
+
+This one is fairly simple, we have decided that all internal ip addresses should be in the range `192.168.x.x` so **network** will be "192.168"
+
+
 ## Step 5 - Retrieve the auth_url
 ## Step 6 - Retrieve the floating IP pool
 ## Step 7 - Retrieve the external network id
+
+Logged in as `cf-user` and using the `cf-terraform` project navigate to Network > Networks, and select the external network. The **network_external_id** is listed under the section "ID".
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Network-Detail-OpenStack-Dashboard.png)
+
 ## Step 8 - Identify a local set of keys to use
 
 At the end we have the following information:
@@ -71,5 +79,5 @@ public_key_path="/Users/chris/.ssh/id_rsa.pub"             # Step 8
 key_path="/Users/chris/.ssh/id_rsa"                        # Step 8
 floating_ip_pool="net04_ext"                               # Step 6
 region="RegionOne"                                         # TODO is this somewhere?
-network_external_id="bb89edee-e639-43b9-b27e-db2fcab833b2" # Step 7
+network_external_id="aa801a43-688b-4949-b82e-74ead5e358cd" # Step 7
 ```
