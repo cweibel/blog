@@ -35,47 +35,41 @@ On the Create User screen, enter a **username** and **password**, set both the P
 Select the `admin` project, navigate it Identity > Projects and click `+ Create Project`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-4.png)
 
-Enter the name for the project. Make sure that the project name does not include white space, this will eventually be fixed. Note that this is also the **tenant name**.
+On the `Project Information` tab enter the name for the project. Make sure that the project name does not include white space, this will eventually be fixed. Note that this is also the **tenant name**.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-3.png)
 
+On the `Project Members` tab, select the user we created back in Step 1 by clicking on the blue "+" icon.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-2.png)
 
+Once the user is selected, be sure that the permissions for the user are `_member_`, higher permissions are not required.  Click `Create Project` when you are done adding users
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard-1.png)
 
 
+## Step 3 - Retrieve the tenant id
+
+Now logout and login as the user `cf-user` (or whatever user you created in Step 1).
+
+Select `cf-terraform` as the project and navigate to Identity > Projects.  Identify the row which corresponds to the project we created in Step 2. The **tenant id** is located in the Project ID column for the identified project.
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard.png)
 
 
-## Step 3 - Retrieve the tenant name
-
-
-## Step 4 - Retrieve the tenant id
-
-
-## Step 5 - Retrieve the network
-
-
-## Step 6 - Retrieve the auth_url
-
-
-## Step 7 - Retrieve the floating IP pool
-
-
-## Step 8 - Retrieve the external network id
-
-
-## Step 9 - Identify a local set of keys to use
+## Step 4 - Retrieve the network
+## Step 5 - Retrieve the auth_url
+## Step 6 - Retrieve the floating IP pool
+## Step 7 - Retrieve the external network id
+## Step 8 - Identify a local set of keys to use
 
 At the end we have the following information:
 ```
-network = "192.168"                                        # Step 5
-auth_url="http://10.2.95.20:5000/v2.0"                     # Step 6
-tenant_name="chris_cf"                                     # Step 3
-tenant_id="69f43a6776344a338b9cafdea088aca4"               # Step 4
-username="chris"                                           # Step 2
-password="chris"                                           # Step 2
-public_key_path="/Users/chris/.ssh/id_rsa.pub"             # Step 9
-key_path="/Users/chris/.ssh/id_rsa"                        # Step 9
-floating_ip_pool="net04_ext"                               # Step 7
+network = "192.168"                                        # Step 4
+auth_url="http://10.2.95.20:5000/v2.0"                     # Step 5
+tenant_name="terraform_cf"                                 # Step 2
+tenant_id="69f43a6776344a338b9cafdea088aca4"               # Step 3
+username="cf_user"                                         # Step 2
+password="cf_user"                                         # Step 2
+public_key_path="/Users/chris/.ssh/id_rsa.pub"             # Step 8
+key_path="/Users/chris/.ssh/id_rsa"                        # Step 8
+floating_ip_pool="net04_ext"                               # Step 6
 region="RegionOne"                                         # TODO is this somewhere?
-network_external_id="bb89edee-e639-43b9-b27e-db2fcab833b2" # Step 8
+network_external_id="bb89edee-e639-43b9-b27e-db2fcab833b2" # Step 7
 ```
