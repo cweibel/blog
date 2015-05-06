@@ -208,3 +208,11 @@ sleep 10
 make destroy
 make clean
 ```
+
+# Resources
+
+ - The primary repository is located [here](https://github.com/cloudfoundry-community/terraform-openstack-cf-install)
+ - [Installing RVM](https://rvm.io/rvm/install)
+ - [Installing Git](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ - [CF CLI Releases](https://github.com/cloudfoundry/cli/releases)
+ - [Traveling CF CLI Install](https://github.com/cloudfoundry-community/traveling-cf-admin)
