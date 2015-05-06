@@ -10,15 +10,15 @@ Assumptions:
 
 We will:
 
- - Create a new user name and password
- - Create a new Project
- - Retrieve the tenant name
- - Retrieve the tenant id
- - Retrieve the network
- - Retrieve the auth_url
- - Retrieve the floating IP pool
- - Retrieve the external network id
- - Identify a local set of keys to use
+ 1. Create a new user name and password
+ 2. Create a new Project
+ 3. Retrieve the tenant name
+ 4. Retrieve the tenant id
+ 5. Retrieve the network
+ 6. Retrieve the auth_url
+ 7. Retrieve the floating IP pool
+ 8. Retrieve the external network id
+ 9. Identify a local set of keys to use
 
 
 ## Step 1 - Create a new user name and password
