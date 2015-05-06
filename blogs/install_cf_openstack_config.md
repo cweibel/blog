@@ -23,8 +23,11 @@ We will:
 
 ## Step 1 - Create a new user name and password
 
+Once you login into Horizon, select the `admin` project, navigate it Identity > Users and click `+ Create User`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-1.jpg)
 
+
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-2.png)
 
 
 ## Step 2 - Create a new Project
