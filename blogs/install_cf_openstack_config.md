@@ -59,23 +59,23 @@ This one is fairly simple, we have decided that all internal ip addresses should
 
 ## Step 5 - Retrieve the auth_url
 
-Logg in as `cf-user` and using the `cf-terraform` (the name we used in Step 2) project navigate to `Project > Compute > Access & Security`, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
+Logged in as `cf-user` and using the `cf-terraform` (the name we used in Step 2) project navigate to `Project > Compute > Access & Security`, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Access-Security-OpenStack-Dashboard.png)
 
 
 ## Step 6 - Retrieve the floating IP pool
 
-Logged in as `cf-user` and using the `admin` project (note: NOT `cf-terraform` project) navigate to Project > Network > Networks. Your OpenStack administrator can identify the external network, the **floating_ip_pool** is listed under the `Name` column for the identified row.
+Logged in as `cf-user` and using the `admin` project (note: NOT `cf-terraform` project) navigate to `Project > Network > Networks`. Your OpenStack administrator can identify the external network, the **floating_ip_pool** is listed under the `Name` column for the identified row.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Networks-OpenStack-Dashboard-1.png)
 
 ## Step 7 - Retrieve the external network id
 
-Logged in as `cf-user` and using the `cf-terraform` project navigate to Network > Networks, and select the floating ip pool from Step 6. The **network_external_id** is listed under the section "ID".d
+Logged in as `cf-user` and using the `cf-terraform` project navigate to `Network > Networks`, and select the floating ip pool from Step 6. The **network_external_id** is listed under the section "ID".
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Network-Detail-OpenStack-Dashboard.png)
 
 ## Step 8 - Identify a local set of keys to use
 
-You need to use an existing set of public/private keys which do not have a passphrase.  If you would like to create your own keys:
+You need to use a set of public/private keys which do not have a passphrase.  If you would like to create your own keys:
 
 ### Key creation on Linux and OSX
 
@@ -107,6 +107,6 @@ password="cf_user"                                         # Step 2
 public_key_path="/Users/chris/.ssh/cfkey.pub"              # Step 8
 key_path="/Users/chris/.ssh/cfkey"                         # Step 8
 floating_ip_pool="net04_ext"                               # Step 6
-region="RegionOne"                                         # TODO is this somewhere?
+region="RegionOne"                                         
 network_external_id="aa801a43-688b-4949-b82e-74ead5e358cd" # Step 7
 ```
