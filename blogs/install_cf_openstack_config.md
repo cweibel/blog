@@ -23,9 +23,9 @@ We will:
 
 ## Step 1 - Create a new user name and password
 
-![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-1.png)
+![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-1.jpg)
 
-    
+
 
 ## Step 2 - Create a new Project
 
