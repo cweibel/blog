@@ -1,4 +1,4 @@
-# Deploying Cloud Foundry on Terraform using Terraform
+# Deploying Cloud Foundry on OpenStack using Terraform
 
 # Training Manual
 
