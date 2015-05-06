@@ -26,7 +26,7 @@ We will:
 Once you login into Horizon, select the `admin` project, navigate it Identity > Users and click `+ Create User`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-1.jpg)
 
-
+On the Create User screen, enter a **username** and **password**, set both the Primary Project and Role to `admin` and click `Create User`
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Users-OpenStack-Dashboard-2.png)
 
 
