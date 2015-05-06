@@ -49,7 +49,7 @@ Once the user is selected, be sure that the permissions for the user are `_membe
 
 Now logout and login as the user `cf-user` (or whatever user you created in Step 1).
 
-Select `cf-terraform` as the project and navigate to Identity > Projects.  Identify the row which corresponds to the project we created in Step 2. The **tenant id** is located in the Project ID column for the identified project.
+Select `cf-terraform` as the project and navigate to `Identity > Projects`.  Identify the row which corresponds to the project we created in Step 2. The **tenant id** is located in the Project ID column for the identified project.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Projects-OpenStack-Dashboard.png)
 
 
@@ -59,7 +59,7 @@ This one is fairly simple, we have decided that all internal ip addresses should
 
 ## Step 5 - Retrieve the auth_url
 
-Logged in as `cf-user` and using the `cf-terraform` project navigate to Project > Compute > Access & Security, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
+Logg in as `cf-user` and using the `cf-terraform` (the name we used in Step 2) project navigate to `Project > Compute > Access & Security`, and select the `API Access` tab. The **auth_url** is listed under the `Identity` `Service Endpoint` value.
 ![](https://raw.githubusercontent.com/cweibel/blog/master/images/Access-Security-OpenStack-Dashboard.png)
 
 
