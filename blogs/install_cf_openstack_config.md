@@ -101,7 +101,7 @@ At the end we have the following information:
 network = "192.168"                                        # Step 4
 auth_url="http://10.2.95.20:5000/v2.0"                     # Step 5
 tenant_name="terraform_cf"                                 # Step 2
-tenant_id="69f43a6776344a338b9cafdea088aca4"               # Step 3
+tenant_id="cb4dd90cd995452ea989b7f8601132b"                # Step 3
 username="cf_user"                                         # Step 2
 password="cf_user"                                         # Step 2
 public_key_path="/Users/chris/.ssh/cfkey.pub"              # Step 8
